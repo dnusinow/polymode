@@ -65,6 +65,28 @@
 ;;;###autoload (autoload 'poly-markdown+r-mode "poly-R")
 (define-polymode poly-markdown+r-mode pm-poly/markdown :lighter " PM-Rmd")
 
+
+;; RESTRUCTURED TEXT
+(require 'poly-rst)
+(defcustom pm-inner/rst+R
+  (clone pm-inner/rst
+         :mode 'R-mode
+         :head-reg "^[ \t]*\\.\\.[ \t]*{[ \t]*[rR]")
+  "ReStructuredText for R"
+  :group 'innermodes
+  :type 'object)
+
+(defcustom pm-poly/rst+R
+  (clone pm-poly/rst
+         :innermode 'pm-inner/rst+R)
+  "ReStructuredText for R configuration"
+  :group 'polymodes
+  :type 'object)
+
+
+;;;###autoload (autoload 'poly-rst+r-mode "poly-R")
+(define-polymode poly-rst+r-mode pm-poly/rst+R :lighter " PM-Rrst")
+
 
 
 ;; RAPPORT
