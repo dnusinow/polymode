@@ -141,7 +141,7 @@ definition directly in [polymode-classes.el](polymode-classes.el).
 
 As noted earlier, each polymode is a function that walks and quacks like
 standard emacs major mode. Hence, things like `poly-XXX-mode-map` and
-`poly-XXX-mode-hook` work just as expected. Plymode functions are defined with
+`poly-XXX-mode-hook` work just as expected. Polymode functions are defined with
 `define-polymode` and can be used in place of emacs standard major or minor
 modes.
 
