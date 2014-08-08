@@ -39,16 +39,6 @@
   :group 'hostmodes
   :type 'object)
 
-;; (defcustom  pm-inner/rst
-;;   (pm-hbtchunkmode-auto "rst"
-;;                      :head-reg "^[ \t]*\\.\\.{[ \t]*\w.*$"
-;;                      :tail-reg "^[ \t]*\\.\\.[ \t]*$"
-;;                      :retriever-regexp "\\.\\.[ \t]*{?\\(\\(\\w\\|\\s_\\)*\\)"
-;;                      :font-lock-narrow t)
-;;   "ReStructuredText typical chunk."
-;;   :group 'innermodes
-;;   :type 'object)
-
 (defcustom pm-inner/rst
   (pm-hbtchunkmode "rst"
                    :mode 'rst-mode
@@ -58,15 +48,6 @@
   "ReStructuredText typical chunk."
   :group 'innermodes
   :type 'object)
-
-;; (defcustom pm-poly/rst
-;;   (pm-polymode-multi-auto "rst"
-;;                         :hostmode 'pm-host/rst
-;;                         :auto-innermode 'pm-inner/rst
-;;                         :init-functions '(poly-rst-remove-rst-hooks))
-;;   "ReST typical configuration"
-;;   :group 'polymodes
-;;   :type 'object)
 
 (defcustom pm-poly/rst
   (pm-polymode-one "rst"
@@ -79,10 +60,6 @@
 
 ;;;###autoload  (autoload 'poly-rst-mode "poly-rst")
 (define-polymode poly-rst-mode pm-poly/rst)
-
-;;; FIXES:
-(defun poly-rst-remove-rst-hooks ()
-  )
 
 (provide 'poly-rst)
 
