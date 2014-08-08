@@ -289,7 +289,7 @@
                    :from-to
                    '(("latex" "\\.\\(tex\\|rnw\\)\\'" "tex" "LaTeX" "Rscript -e \"library(knitr); knit('%i', output='%o')\"")
                      ("html" "\\.x?html?\\'" "html" "HTML" "Rscript -e \"library(knitr); knit('%i', output='%o')\"")
-                     ("markdown" "\\.r?md\\'" "md" "Markdown" "Rscript -e \"library(knitr); knit('%i', output='%o')\"")
+                     ("markdown" "\\.[Rr]?md\\'" "md" "Markdown" "Rscript -e \"library(knitr); knit('%i', output='%o')\"")
                      ("rst" "\\.[Rr]?rst" "rst" "ReStructuredText" "Rscript -e \"library(knitr); knit('%i', output='%o')\"")
                      ("brew" "\\.r?brew\\'" "brew" "Brew" "Rscript -e \"library(knitr); knit('%i', output='%o')\"")
                      ("asciidoc" "\\.asciidoc\\'" "txt" "AsciiDoc" "Rscript -e \"library(knitr); knit('%i', output='%o')\"")
@@ -326,7 +326,7 @@
                       :from-to
                       '(("latex" "\\.\\(tex\\|rnw\\)\\'" "tex" "LaTeX" "library(knitr); knit('%i', output='%o')")
                         ("html" "\\.x?html?\\'" "html" "HTML" "library(knitr); knit('%i', output='%o')")
-                        ("markdown" "\\.r?md\\'" "md" "Markdown" "library(knitr); knit('%i', output='%o')")
+                        ("markdown" "\\.[Rr]?md\\'" "md" "Markdown" "library(knitr); knit('%i', output='%o')")
                         ("rst" "\\.[Rr]?rst\\'" "rst" "ReStructuredText" "library(knitr); knit('%i', output='%o')")
                         ("brew" "\\.r?brew\\'" "brew" "Brew" "library(knitr); knit('%i', output='%o')")
                         ("asciidoc" "\\.asciidoc\\'" "txt" "AsciiDoc" "library(knitr); knit('%i', output='%o')")
