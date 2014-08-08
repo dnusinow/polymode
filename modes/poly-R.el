@@ -290,7 +290,7 @@
                    '(("latex" "\\.\\(tex\\|rnw\\)\\'" "tex" "LaTeX" "Rscript -e \"library(knitr); knit('%i', output='%o')\"")
                      ("html" "\\.x?html?\\'" "html" "HTML" "Rscript -e \"library(knitr); knit('%i', output='%o')\"")
                      ("markdown" "\\.r?md\\'" "md" "Markdown" "Rscript -e \"library(knitr); knit('%i', output='%o')\"")
-                     ("rst" "\\.rst" "rst" "ReStructuredText" "Rscript -e \"library(knitr); knit('%i', output='%o')\"")
+                     ("rst" "\\.[Rr]?rst" "rst" "ReStructuredText" "Rscript -e \"library(knitr); knit('%i', output='%o')\"")
                      ("brew" "\\.r?brew\\'" "brew" "Brew" "Rscript -e \"library(knitr); knit('%i', output='%o')\"")
                      ("asciidoc" "\\.asciidoc\\'" "txt" "AsciiDoc" "Rscript -e \"library(knitr); knit('%i', output='%o')\"")
                      ("textile" "\\.textile\\'" "textile" "Textile" "Rscript -e \"library(knitr); knit('%i', output='%o')\"")))
@@ -300,7 +300,8 @@
 
 (polymode-register-weaver pm-weaver/knitR nil
                           pm-poly/noweb+R pm-poly/markdown
-                          pm-poly/rapport pm-poly/html+R)
+                          pm-poly/rapport pm-poly/html+R
+                          pm-poly/rst+R)
 
 (defcustom pm-weaver/Sweave
   (pm-shell-weaver "sweave"
@@ -326,7 +327,7 @@
                       '(("latex" "\\.\\(tex\\|rnw\\)\\'" "tex" "LaTeX" "library(knitr); knit('%i', output='%o')")
                         ("html" "\\.x?html?\\'" "html" "HTML" "library(knitr); knit('%i', output='%o')")
                         ("markdown" "\\.r?md\\'" "md" "Markdown" "library(knitr); knit('%i', output='%o')")
-                        ("rst" "\\.rst\\'" "rst" "ReStructuredText" "library(knitr); knit('%i', output='%o')")
+                        ("rst" "\\.[Rr]?rst\\'" "rst" "ReStructuredText" "library(knitr); knit('%i', output='%o')")
                         ("brew" "\\.r?brew\\'" "brew" "Brew" "library(knitr); knit('%i', output='%o')")
                         ("asciidoc" "\\.asciidoc\\'" "txt" "AsciiDoc" "library(knitr); knit('%i', output='%o')")
                         ("textile" "\\.textile\\'" "textile" "Textile" "library(knitr); knit('%i', output='%o')"))
@@ -338,7 +339,8 @@
 
 (polymode-register-weaver pm-weaver/knitR-ESS nil
                           pm-poly/noweb+R pm-poly/markdown
-                          pm-poly/rapport pm-poly/html+R)
+                          pm-poly/rapport pm-poly/html+R
+                          pm-poly/rst+R)
 
 (defcustom pm-weaver/Sweave-ESS
   (pm-callback-weaver "ESS-Sweave"
