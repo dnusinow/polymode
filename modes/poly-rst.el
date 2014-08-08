@@ -43,7 +43,7 @@
   (pm-hbtchunkmode "rst"
                    :mode 'rst-mode
                    :head-reg "^[ \t]*\\.\\.[ \t]*{\w.*$"
-                   :tail-reg "^[ \t]*\\.\\.[ \t]*$"
+                   :tail-reg "^[ \t]*\\.\\. \\.\\.[ \t]*$"
                    :font-lock-narrow t)
   "ReStructuredText typical chunk."
   :group 'innermodes
